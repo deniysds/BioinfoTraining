@@ -3,6 +3,9 @@ Pelatihan ini ditujukan untuk dapat memberikan pemahaman dasar untuk pengolahan 
 
 Persiapan Cloud
 
+
 Spesifikasi Komputasi
 
+
 Kebutuhan dan Analisis Biaya
+
