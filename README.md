@@ -9,3 +9,5 @@ Spesifikasi Komputasi
 
 Kebutuhan dan Analisis Biaya
 
+Referensi untuk materi pelatihan:
+1. https://github.com/sib-swiss/training-collection
