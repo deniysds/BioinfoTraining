@@ -5,7 +5,7 @@ Persiapan Cloud
 
 
 Spesifikasi Komputasi
-
+- contoh
 
 Kebutuhan dan Analisis Biaya
 
