@@ -103,10 +103,9 @@ $ wget -o- https://github.com/broadinstitute/picard/releases/download/3.0.0/pica
 ```
 
 * Trimometric
-Download di https://drive.google.com/file/d/1DuQS0oEj_RwwMGC9CrLR2ufBonWY34yo/view?usp=share_link
-Upload ke : /opt/
 ```bash
 $ cd /opt
+$ wget -o- https://github.com/usadellab/Trimmomatic/files/5854859/Trimmomatic-0.39.zip
 $ unzip Trimmomatic-0.39.zip
 $ mv Trimmomatic-0.39 trimmomatic
 $ cd trimmomatic
