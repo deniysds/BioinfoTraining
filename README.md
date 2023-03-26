@@ -39,13 +39,13 @@ $ ssh -i /opt/training_bioinfo_peserta.pem root@110.239.69.17
 
 #### Petunjuk Instalasi
 1. Update and Upgrade Software
-```bash
+```sh
 $ apt update -y && apt upgrade -y
 ```
 
 2. Install Library
 ```bash
-$ sudo apt install -y python3 python-is-python3 libbz2-dev liblzma-dev bzip2 gcc zlib1g-dev make openjdk-17-jre openjdk-17-jdk
+$ sudo apt install -y python3 python-is-python3 libbz2-dev liblzma-dev bzip2 gcc zlib1g-dev make openjdk-17-jre openjdk-17-jdk unzip
 ```
 
 3. Install Software Pendukung
