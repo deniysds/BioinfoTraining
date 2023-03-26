@@ -20,28 +20,105 @@ Pelatihan ini ditujukan untuk dapat memberikan pemahaman dasar untuk pengolahan 
 8. Telomere to Telomere : https://github.com/marbl/CHM13
 
 #### Petunjuk Login ke Terminal
-> Login via username dan password :
-ssh [username]@[ip_address]
-`$ ssh root@110.239.66.155`
+1. Login via username dan password :
+```
+$ ssh [username]@[ip_address]
+$ ssh root@110.239.66.155
+```
 
-> Login with keypair
-ssh -i [key_file] [username]@[ip_address]
->- same path
-`$ ssh -i training_bioinfo_peserta.pem root@110.239.69.17`
-> - diferent path
-`$ ssh -i /opt/training_bioinfo_peserta.pem root@110.239.69.17`
+2. Login with keypair
+* same path
+```bash
+$ ssh -i [key_file] [username]@[ip_address]
+$ ssh -i training_bioinfo_peserta.pem root@110.239.69.17
+```
+* different path
+```bash
+$ ssh -i /opt/training_bioinfo_peserta.pem root@110.239.69.17
+```
 
 #### Petunjuk Instalasi
-> Update and Upgrade Software
-`$ apt update -y && apt upgrade -y`
+1. Update and Upgrade Software
+```bash
+$ apt update -y && apt upgrade -y
+```
 
-> Install Library
-> `$ sudo apt install -y python3 python-is-python3 libbz2-dev liblzma-dev bzip2 gcc zlib1g-dev make openjdk-17-jre openjdk-17-jdk`
+2. Install Library
+```bash
+$ sudo apt install -y python3 python-is-python3 libbz2-dev liblzma-dev bzip2 gcc zlib1g-dev make openjdk-17-jre openjdk-17-jdk
+```
 
-> Install Software Pendukung
-> `$ sudo apt -y install sra-toolkit bwa samtools`
-> 
+3. Install Software Pendukung
+* SRAtoolkit
+```bash
+$ sudo apt -y install sra-toolkit
+```
 
+* BWA mem
+```bash
+$ sudo apt -y install bwa
+```
+
+* Samtools
+```bash
+$ sudo apt -y install samtools
+```
+
+* GATK
+```bash
+$ cd /opt
+$ wget -o- https://github.com/broadinstitute/gatk/releases/download/4.3.0.0/gatk-4.3.0.0.zip
+$ unzip gatk-4.3.0.0.zip
+```
+
+Tambahkan PATH GATK kedalam .bashrc pada baris paling bawah
+```bash
+$ nano ~/.bashrc
+export PATH=$PATH:/opt/gatk-4.3.0.0/
+```
+Tekan CTRL+X untuk keluar dari editor
+
+* BCFtools
+```bash
+$ cd /opt
+$ wget -o- https://github.com/samtools/bcftools/releases/download/1.17/bcftools-1.17.tar.bz2
+$ tar -xvf bcftools-1.17.tar.bz2
+$ cd bcftools-1.17
+$ ./configure
+$ make
+$ make install
+```
+
+Tambahkan PATH BCFtools kedalam .bashrc pada baris paling bawah
+```bash
+$ nano ~/.bashrc
+export PATH=$PATH:/opt/bcftools-1.17
+```
+Tekan CTRL+X untuk keluar dari editor
+
+* Picard
+```bash
+$ cd /opt
+$ wget -o- https://github.com/broadinstitute/picard/releases/download/3.0.0/picard.jar
+```
+
+* Trimometric
+Download di https://drive.google.com/file/d/1DuQS0oEj_RwwMGC9CrLR2ufBonWY34yo/view?usp=share_link
+Upload ke : /opt/
+```bash
+$ cd /opt
+$ unzip Trimmomatic-0.39.zip
+$ mv Trimmomatic-0.39 trimmomatic
+$ cd trimmomatic
+$ mv trimmomatic-0.39.jar trimmomatic.jar
+```
+
+Tambahkan PATH Picard dan Trimometric kedalam .bashrc pada baris paling bawah
+```bash
+$ nano ~/.bashrc
+export PATH=$PATH:/opt/
+```
+Tekan CTRL+X untuk keluar dari editor
 
 
 ### 2. Instance GPU Based
