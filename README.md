@@ -119,6 +119,10 @@ export PATH=$PATH:/opt/
 ```
 Tekan CTRL+X untuk keluar dari editor
 
+Reload PATH
+```bash
+$ source ~/.bashrc
+```
 
 ### 2. Instance GPU Based
 #### Minimum Hardware Requirenment
